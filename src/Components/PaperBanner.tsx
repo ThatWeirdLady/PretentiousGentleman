@@ -2,7 +2,7 @@ import { Box, Paper, Typography } from "@mui/material";
 import React, { CSSProperties } from "react";
 
 interface PaperBannerProps {
-  backgroundColor: CSSProperties;
+  backgroundColor: CSSProperties["backgroundColor"];
   content: string;
 }
 
@@ -14,7 +14,7 @@ const PaperBanner = (props: PaperBannerProps) => {
       <Paper
         elevation={12}
         sx={{
-          backgroundColor: { backgroundColor },
+          backgroundColor: backgroundColor,
           width: "80%",
           height: "400",
         }}
