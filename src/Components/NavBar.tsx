@@ -2,7 +2,7 @@
 
 import { AppBar, Box, Button, IconButton, ThemeProvider, Toolbar, Typography } from '@mui/material';
 import React from 'react'
-import small_logo from "./images/small_logo.jpg";
+import small_logo from "../images/small_logo.jpg";
 
 const imgSize = 64;
 let paleGreen = "#C3BF6D";
@@ -24,7 +24,7 @@ const NavBar = () => {
                         <img src={small_logo} height={imgSize} width={imgSize} ></img>
 
                     </IconButton>
-                    <Typography textAlign={'left'} variant="h6" component="div" sx={{ flexGrow: 1, fontFamily: "regular", src: { pathToFont }, font: "GreatVibes-Regular" }}>
+                    <Typography textAlign={'left'} variant="h4" component="div" sx={{ flexGrow: 1, fontFamily: "regular" }}>
                         The Pretentious Gentleman
                     </Typography>
                     <Button color="inherit">Books</Button>

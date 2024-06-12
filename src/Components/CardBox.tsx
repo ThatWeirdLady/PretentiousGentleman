@@ -1,6 +1,6 @@
 import { Box, Card, CardActionArea, CardMedia, Paper, Typography } from '@mui/material';
 import React from 'react';
-import { paleGreen } from '.';
+import { paleGreen } from '..';
 import prideImg from "./images/Pride.jpg";
 
 

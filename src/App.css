@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #130303;
 }
 
 .App-logo {
@@ -32,7 +33,13 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+@font-face {
+  font-family: regular;
+  src: url("./fonts/Great_Vibes/GreatVibes-Regular.ttf");
 }

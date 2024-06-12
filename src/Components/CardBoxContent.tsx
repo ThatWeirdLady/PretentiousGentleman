@@ -14,7 +14,7 @@ const CardBoxContent = (props: CardBoxContentProps) => {
     const content = props.content;
     const flip = props.flip;
 
-    const TheImage = <img height="400" width="600" style={{ display: "flex", justifyContent: 'left', padding: "8px" }} src={img}/* CHANGE IMAGE HERE */ />;
+    const TheImage = <img height="200" width="200" style={{ display: "flex", justifyContent: 'left', padding: "8px" }} src={img}/* CHANGE IMAGE HERE */ />;
     const TheText = <Box >
         <Typography sx={{ margin: 8 }} variant='h2'>{title}</Typography>
         <Typography variant='body2'>{content}</Typography>

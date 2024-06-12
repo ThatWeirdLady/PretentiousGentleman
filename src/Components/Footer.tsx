@@ -1,9 +1,9 @@
 import React from 'react'
-import { grey } from '.'
+import { grey } from "../index"
 import { BottomNavigation, BottomNavigationAction, Box } from '@mui/material'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import patreon from './images/icons8-patreon-50.png';
+import patreon from '../images/icons8-patreon-50.png';
 
 
 const Footer = () => {
