@@ -1,5 +1,5 @@
-import { Box, Paper, Typography } from "@mui/material";
-import React, { CSSProperties } from "react";
+import { Box, Typography } from "@mui/material";
+import { CSSProperties } from "react";
 
 interface PaperBannerProps {
   backgroundColor: CSSProperties["backgroundColor"];

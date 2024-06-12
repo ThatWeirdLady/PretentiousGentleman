@@ -18,10 +18,9 @@ import AFoolKing from "./images/AFoolKillsAKing.jpg";
 import Skull from "./images/skull.jpg";
 import BottomsUp from "./images/BottomsUp.jpg";
 import BardOnAWall from "./images/BardOnAWall.jpg";
-import { Button } from "@mui/material";
 
 const licorice = "#130303";
-const green = "#7b7554";
+// const green = "#7b7554";
 const blackBean = "#341309";
 const spaceCadet = "#2d324d";
 const darkgrey = "#363446";
