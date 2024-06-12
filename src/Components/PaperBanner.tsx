@@ -10,7 +10,14 @@ const PaperBanner = (props: PaperBannerProps) => {
   const backgroundColor = props.backgroundColor;
   const content = props.content;
   return (
-    <Box mt={2} sx={{ display: "flex", justifyContent: "center" }}>
+    <Box
+      mt={2}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        borderColor: "whitesmoke",
+      }}
+    >
       <Paper
         elevation={12}
         sx={{
