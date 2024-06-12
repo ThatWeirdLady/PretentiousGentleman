@@ -15,11 +15,9 @@ const PaperBanner = (props: PaperBannerProps) => {
       sx={{
         display: "flex",
         justifyContent: "center",
-        borderColor: "whitesmoke",
       }}
     >
-      <Paper
-        elevation={12}
+      <Box
         sx={{
           backgroundColor: backgroundColor,
           width: "80%",
@@ -36,7 +34,7 @@ const PaperBanner = (props: PaperBannerProps) => {
         >
           {content}
         </Typography>
-      </Paper>
+      </Box>
     </Box>
   );
 };

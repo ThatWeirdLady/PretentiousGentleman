@@ -18,6 +18,7 @@ import AFoolKing from "./images/AFoolKillsAKing.jpg";
 import Skull from "./images/skull.jpg";
 import BottomsUp from "./images/BottomsUp.jpg";
 import BardOnAWall from "./images/BardOnAWall.jpg";
+import { Button } from "@mui/material";
 
 const licorice = "#130303";
 const green = "#7b7554";
@@ -29,37 +30,48 @@ function App() {
   return (
     <div className="App" style={{ width: "100vw" }}>
       <NavBar></NavBar>
+      <ParallaxBackground url={Forest} height="20vh" text={"Written Works"} />
 
-      <ParallaxBackground url={Forest} height="20vh" />
-      <PaperBanner
-        backgroundColor={licorice}
-        content="Written Works"
-      ></PaperBanner>
-      <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          flexWrap: "wrap",
+        }}
+      >
         <ImageCard
           img={ThreadCount}
-          backgroundColor={darkgrey}
+          backgroundColor={licorice}
           title={"Thread Count"}
           content={"In Progress"}
+          link={"/pdf/thread_count.pdf"}
         />
         <ImageCard
           img={DictatorsGuide}
-          backgroundColor={blackBean}
+          backgroundColor={licorice}
           title={"The Dictator's Guide to Destroying Democracy"}
           content={"Available on Amazon"}
+          link={"/pdf/the_dictators_guide_to_destroying_democracy.pdf"}
         />
         <ImageCard
           img={WeHadBeenFighting}
-          backgroundColor={spaceCadet}
+          backgroundColor={licorice}
           title={"We Had Been Fighting"}
           content={"Completed Work"}
+          link={"/pdf/we_had_been_fighting.pdf"}
         />
       </Box>
 
-      <ParallaxBackground url={Forest} height="20vh" />
+      <ParallaxBackground url={Forest} height="20vh" text={"Artwork"} />
 
-      <PaperBanner backgroundColor={licorice} content="Artwork"></PaperBanner>
-      <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          flexWrap: "wrap",
+          boxShadow: "white",
+        }}
+      >
         <ImageCard
           img={PrideImg}
           backgroundColor={darkgrey}
@@ -87,7 +99,13 @@ function App() {
           content={""}
         />
       </Box>
-      <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-evenly",
+        }}
+      >
         <ImageCard
           img={AFoolKing}
           backgroundColor={darkgrey}
