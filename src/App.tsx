@@ -43,21 +43,21 @@ function App() {
           backgroundColor={licorice}
           title={"Thread Count"}
           content={"In Progress"}
-          link={"/pdf/thread_count.pdf"}
+          link={"./pdf/thread_count.pdf"}
         />
         <ImageCard
           img={DictatorsGuide}
           backgroundColor={licorice}
           title={"The Dictator's Guide to Destroying Democracy"}
           content={"Available on Amazon"}
-          link={"/pdf/the_dictators_guide_to_destroying_democracy.pdf"}
+          link={"./pdf/the_dictators_guide_to_destroying_democracy.pdf"}
         />
         <ImageCard
           img={WeHadBeenFighting}
           backgroundColor={licorice}
           title={"We Had Been Fighting"}
           content={"Completed Work"}
-          link={"/pdf/we_had_been_fighting.pdf"}
+          link={"./pdf/we_had_been_fighting.pdf"}
         />
       </Box>
 
