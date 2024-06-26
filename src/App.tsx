@@ -5,7 +5,6 @@ import BookCard from "./Components/BookCard";
 import { ParallaxBackground } from "./Parallax/ParallaxBackground";
 import Graveyard from "./images/graveyard2.jpg";
 import Forest from "./images/Forest2.jpg";
-import PaperBanner from "./Components/PaperBanner";
 import ThreadCount from "./images/ThreadCount.webp";
 import DictatorsGuide from "./images/DictatorsGuideEdit.jpg";
 import Box from "@mui/material/Box";

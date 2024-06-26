@@ -7,7 +7,6 @@ interface ArtworkCardProps {
   title?: string;
   backgroundColor: CSSProperties["backgroundColor"];
   alt?: string;
-  link?: string;
 }
 
 const ArtworkCard = (props: ArtworkCardProps) => {
@@ -18,7 +17,6 @@ const ArtworkCard = (props: ArtworkCardProps) => {
   const img = props.img;
   const backgroundColor = props.backgroundColor;
   const alt = props.alt;
-  const link = props.link;
 
   return (
     <Card
