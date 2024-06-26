@@ -1,7 +1,7 @@
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer";
-import ImageCard from "./Components/ImageCard";
+import BookCard from "./Components/BookCard";
 import { ParallaxBackground } from "./Parallax/ParallaxBackground";
 import Graveyard from "./images/graveyard2.jpg";
 import Forest from "./images/Forest2.jpg";
@@ -18,6 +18,7 @@ import AFoolKing from "./images/AFoolKillsAKing.jpg";
 import Skull from "./images/skull.jpg";
 import BottomsUp from "./images/BottomsUp.jpg";
 import BardOnAWall from "./images/BardOnAWall.jpg";
+import ArtworkCard from "./Components/ArtworkCard";
 
 const licorice = "#130303";
 // const green = "#7b7554";
@@ -38,21 +39,21 @@ function App() {
           flexWrap: "wrap",
         }}
       >
-        <ImageCard
+        <BookCard
           img={ThreadCount}
           backgroundColor={licorice}
           title={"Thread Count"}
           content={"In Progress"}
           link={"./pdf/thread_count.pdf"}
         />
-        <ImageCard
+        <BookCard
           img={DictatorsGuide}
           backgroundColor={licorice}
           title={"The Dictator's Guide to Destroying Democracy"}
           content={"Available on Amazon"}
           link={"./pdf/the_dictators_guide_to_destroying_democracy.pdf"}
         />
-        <ImageCard
+        <BookCard
           img={WeHadBeenFighting}
           backgroundColor={licorice}
           title={"We Had Been Fighting"}
@@ -71,31 +72,21 @@ function App() {
           boxShadow: "white",
         }}
       >
-        <ImageCard
-          img={PrideImg}
-          backgroundColor={darkgrey}
-          title={""}
-          content={
-            "We show Pride for those who fought to get us here, and for those who fight to keep us here"
-          }
-        />
-        <ImageCard
+        <ArtworkCard img={PrideImg} backgroundColor={licorice} title={""} />
+        <ArtworkCard
           img={BardInFall}
-          backgroundColor={blackBean}
+          backgroundColor={licorice}
           title={"Bard In Fall"}
-          content={""}
         />
-        <ImageCard
+        <ArtworkCard
           img={BeautifulDeath}
-          backgroundColor={spaceCadet}
+          backgroundColor={licorice}
           title={"Beautiful Death"}
-          content={""}
         />
-        <ImageCard
+        <ArtworkCard
           img={NoLoitering}
-          backgroundColor={darkgrey}
+          backgroundColor={licorice}
           title={"No Loitering"}
-          content={""}
         />
       </Box>
       <Box
@@ -105,29 +96,25 @@ function App() {
           justifyContent: "space-evenly",
         }}
       >
-        <ImageCard
+        <ArtworkCard
           img={AFoolKing}
-          backgroundColor={darkgrey}
+          backgroundColor={licorice}
           title={"A Fool Kills A King"}
-          content={""}
         />
-        <ImageCard
+        <ArtworkCard
           img={Skull}
-          backgroundColor={spaceCadet}
+          backgroundColor={licorice}
           title={"Death on a Shelf"}
-          content={""}
         />
-        <ImageCard
+        <ArtworkCard
           img={BottomsUp}
-          backgroundColor={blackBean}
+          backgroundColor={licorice}
           title={"Bottoms Up"}
-          content={""}
         />
-        <ImageCard
+        <ArtworkCard
           img={BardOnAWall}
-          backgroundColor={darkgrey}
+          backgroundColor={licorice}
           title={"A Broken Song"}
-          content={""}
         />
       </Box>
       <ParallaxBackground url={Graveyard} height="20vh" />

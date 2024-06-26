@@ -43,9 +43,13 @@
   font-family: regular;
   src: url("./fonts/Great_Vibes/GreatVibes-Regular.ttf");
 }
-.ImageCard{
+.BookCard{
   font-family: "Serif";
   font-style: "Georgia";
   color: whitesmoke;
   text-shadow:2px 2px #130303;
+}
+.ImageModal{
+  font-size: large;
+  font-family: regular;
 }

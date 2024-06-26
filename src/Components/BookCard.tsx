@@ -1,7 +1,7 @@
 import { Card, Typography } from "@mui/material";
 import React, { CSSProperties } from "react";
 
-interface ImageCardProps {
+interface BookCardProps {
   img?: string;
   title: string;
   content: string;
@@ -10,7 +10,7 @@ interface ImageCardProps {
   link?: string;
 }
 
-const ImageCard = (props: ImageCardProps) => {
+const BookCard = (props: BookCardProps) => {
   const img = props.img;
   const title = props.title;
   const content = props.content;
@@ -34,7 +34,7 @@ const ImageCard = (props: ImageCardProps) => {
         borderWidth: 1,
       }}
     >
-      <Typography className="ImageCard" variant={"h4"}>
+      <Typography className="BookCard" variant={"h4"}>
         {title}
       </Typography>
       <img
@@ -44,11 +44,11 @@ const ImageCard = (props: ImageCardProps) => {
         alt={alt}
         onClick={onImageClick}
       />
-      <Typography className="ImageCard" variant="body1">
+      <Typography className="BookCard" variant="body1">
         {content}
       </Typography>
     </Card>
   );
 };
 
-export default ImageCard;
+export default BookCard;
