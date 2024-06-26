@@ -19,6 +19,7 @@ import Skull from "./images/skull.jpg";
 import BottomsUp from "./images/BottomsUp.jpg";
 import BardOnAWall from "./images/BardOnAWall.jpg";
 import ArtworkCard from "./Components/ArtworkCard";
+import FilmCarousel from "./Components/FilmCarousel";
 
 const licorice = "#130303";
 // const green = "#7b7554";
@@ -117,8 +118,8 @@ function App() {
           title={"A Broken Song"}
         />
       </Box>
-      <ParallaxBackground url={Graveyard} height="20vh" />
-      <PaperBanner backgroundColor={licorice} content="Film Work"></PaperBanner>
+      <ParallaxBackground url={Graveyard} height="20vh" text="Film Work" />
+      <FilmCarousel></FilmCarousel>
       <Footer></Footer>
     </div>
   );
