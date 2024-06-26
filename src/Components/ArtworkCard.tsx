@@ -11,8 +11,16 @@ interface ArtworkCardProps {
 
 const ArtworkCard = (props: ArtworkCardProps) => {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  function isMobile() {
+    return window.matchMedia("(max-width: 700px)").matches;
+  }
+
+  function onImageClick() {
+    if (isMobile()) return;
+    setOpen(true);
+  }
 
   const img = props.img;
   const backgroundColor = props.backgroundColor;
@@ -30,7 +38,13 @@ const ArtworkCard = (props: ArtworkCardProps) => {
         borderWidth: 1,
       }}
     >
-      <img src={img} width={200} height={200} alt={alt} onClick={handleOpen} />
+      <img
+        src={img}
+        width={200}
+        height={200}
+        alt={alt}
+        onClick={onImageClick}
+      />
       <ImageModal
         open={open}
         onClose={handleClose}
