@@ -22,9 +22,9 @@ import FilmCarousel from "./Components/FilmCarousel";
 
 const licorice = "#130303";
 // const green = "#7b7554";
-const blackBean = "#341309";
-const spaceCadet = "#2d324d";
-const darkgrey = "#363446";
+// const blackBean = "#341309";
+// const spaceCadet = "#2d324d";
+// const darkgrey = "#363446";
 function App() {
   // return <ParallaxDemo />;
   return (
