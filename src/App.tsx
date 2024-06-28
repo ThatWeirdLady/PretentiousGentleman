@@ -4,20 +4,17 @@ import Footer from "./Components/Footer";
 import Portfolio from "./Portfolio";
 import AboutMe from "./Components/AboutMe";
 import { useState } from "react";
+import { Tab } from "./Tab";
 
 export const licorice = "#130303";
-// const green = "#7b7554";
-// const blackBean = "#341309";
-// const spaceCadet = "#2d324d";
-// const darkgrey = "#363446";
 function App() {
-  const [currentPage, setCurrentPage] = useState("portfolio");
+  const [currentPage, setCurrentPage] = useState(Tab.HOME);
 
   return (
     <div className="App" style={{ width: "100vw" }}>
       <NavBar onPageChange={setCurrentPage} />
-      {currentPage === "portfolio" && <Portfolio />}
-      {currentPage === "aboutme" && <AboutMe />}
+      {currentPage === Tab.HOME && <Portfolio />}
+      {currentPage === Tab.ABOUT && <AboutMe />}
       <Footer />
     </div>
   );

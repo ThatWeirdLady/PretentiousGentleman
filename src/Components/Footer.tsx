@@ -1,4 +1,3 @@
-import React from "react";
 import { grey } from "../index";
 import { BottomNavigation, BottomNavigationAction, Box } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";

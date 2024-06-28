@@ -7,22 +7,23 @@ import {
   Typography,
 } from "@mui/material";
 import small_logo from "../images/small_logo.jpg";
+import { Tab } from "../Tab";
 
 const imgSize = 64;
 
 interface IProps {
-  onPageChange: (nextPage: string) => void;
+  onPageChange: (nextPage: Tab) => void;
 }
 
 const NavBar = (props: IProps) => {
   const onPageChange = props.onPageChange;
 
   function toHome() {
-    onPageChange("portfolio");
+    onPageChange(Tab.HOME);
   }
 
   function toAboutMe() {
-    onPageChange("aboutme");
+    onPageChange(Tab.ABOUT);
   }
   return (
     <Box sx={{ flexGrow: 1 }}>

@@ -1,5 +1,5 @@
 import { Card } from "@mui/material";
-import React, { CSSProperties } from "react";
+import { CSSProperties, useState } from "react";
 import ImageModal from "./ImageModal";
 
 interface ArtworkCardProps {
@@ -10,7 +10,7 @@ interface ArtworkCardProps {
 }
 
 const ArtworkCard = (props: ArtworkCardProps) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
 
   function isMobile() {

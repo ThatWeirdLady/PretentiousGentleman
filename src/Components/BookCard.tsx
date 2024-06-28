@@ -1,5 +1,5 @@
 import { Card, Typography } from "@mui/material";
-import React, { CSSProperties } from "react";
+import { CSSProperties } from "react";
 
 interface BookCardProps {
   img?: string;

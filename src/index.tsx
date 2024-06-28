@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { ThemeProvider, createTheme } from '@mui/material';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+
+import { ThemeProvider, createTheme } from "@mui/material";
 
 export const licorice = "#130303";
 export const red = "#95190C";
@@ -16,22 +16,22 @@ const theme = createTheme({
       main: licorice,
     },
     secondary: {
-      main: paleGreen
+      main: paleGreen,
     },
     error: {
-      main: red
+      main: red,
     },
     success: {
-      main: palePink
+      main: palePink,
     },
     info: {
-      main: grey
-    }
+      main: grey,
+    },
   },
 });
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
@@ -40,8 +40,3 @@ root.render(
     </ThemeProvider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

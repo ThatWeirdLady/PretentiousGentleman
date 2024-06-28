@@ -1,12 +1,12 @@
 import { Card } from "@mui/material";
-import React, { CSSProperties } from "react";
+import { CSSProperties } from "react";
+import { licorice } from "../App";
 
 interface VideoCardProps {
   title: string;
   vid: string;
   backgroundColor: CSSProperties["backgroundColor"];
 }
-const licorice = "#130303";
 const VideoCard = (props: VideoCardProps) => {
   const title = props.title;
   const vid = props.vid;
