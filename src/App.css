@@ -53,3 +53,6 @@
   font-size: large;
   font-family: regular;
 }
+.rounded-image{
+  border-radius: 45%;
+}
