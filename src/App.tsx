@@ -5,6 +5,7 @@ import Portfolio from "./Portfolio";
 import AboutMe from "./Components/AboutMe";
 import { useState } from "react";
 import { Tab } from "./Tab";
+import { SupportPage } from "./Support";
 
 export const licorice = "#130303";
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <NavBar onPageChange={setCurrentPage} />
       {currentPage === Tab.HOME && <Portfolio />}
       {currentPage === Tab.ABOUT && <AboutMe />}
+      {currentPage === Tab.SUPPORT && <SupportPage />}
       <Footer />
     </div>
   );
