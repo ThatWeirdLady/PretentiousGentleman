@@ -32,6 +32,11 @@ const NavBar = (props: IProps) => {
     onPageChange(Tab.ABOUT);
     setSideOpen(false);
   }
+
+  function toSupport() {
+    onPageChange(Tab.SUPPORT);
+    setSideOpen(false);
+  }
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -62,6 +67,9 @@ const NavBar = (props: IProps) => {
             <Button onClick={toAboutMe} color="inherit">
               About Me
             </Button>
+            <Button onClick={toSupport} color="inherit">
+              Support
+            </Button>
           </Box>
           <Box sx={{ display: { xs: "block", sm: "none" } }}>
             <IconButton
@@ -85,6 +93,9 @@ const NavBar = (props: IProps) => {
                 </Button>
                 <Button onClick={toAboutMe} sx={{ color: "white" }}>
                   About Me
+                </Button>
+                <Button onClick={toSupport} sx={{ color: "white" }}>
+                  Support
                 </Button>
               </Box>
             </Drawer>
