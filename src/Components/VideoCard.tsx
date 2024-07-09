@@ -1,37 +1,32 @@
-import { Card } from "@mui/material";
+import { Box } from "@mui/material";
 import { CSSProperties } from "react";
-import { licorice } from "../App";
 
 interface VideoCardProps {
   title: string;
   vid: string;
   backgroundColor: CSSProperties["backgroundColor"];
 }
+
+const ratio = 9 / 16;
+export const ytVideoWidth = 560;
 const VideoCard = (props: VideoCardProps) => {
   const title = props.title;
   const vid = props.vid;
-  const backgroundColor = licorice;
+  const width = Math.min(window.innerWidth, ytVideoWidth) - 16 * 2.5;
+  const height = ratio * width;
   return (
-    <Card
-      sx={{
-        minWidth: 400,
-        maxWidth: 400,
-        margin: 2,
-        backgroundColor: backgroundColor,
-        border: "grey",
-        borderStyle: "solid",
-        borderWidth: 1,
-      }}
+    <Box
+      sx={{ p: 2, width: "100%", display: "flex", justifyContent: "center" }}
     >
       <iframe
-        width="400"
-        height="400"
+        width={width}
+        height={height}
         src={vid}
         title={title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
       ></iframe>
-    </Card>
+    </Box>
   );
 };
 

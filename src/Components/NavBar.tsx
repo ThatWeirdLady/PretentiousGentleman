@@ -2,12 +2,16 @@ import {
   AppBar,
   Box,
   Button,
+  Drawer,
   IconButton,
   Toolbar,
   Typography,
 } from "@mui/material";
 import small_logo from "../images/small_logo.jpg";
 import { Tab } from "../Tab";
+import MenuIcon from "@mui/icons-material/Menu";
+import { useState } from "react";
+import { licorice } from "../App";
 
 const imgSize = 64;
 
@@ -16,14 +20,17 @@ interface IProps {
 }
 
 const NavBar = (props: IProps) => {
+  const [sideOpen, setSideOpen] = useState(false);
   const onPageChange = props.onPageChange;
 
   function toHome() {
     onPageChange(Tab.HOME);
+    setSideOpen(false);
   }
 
   function toAboutMe() {
     onPageChange(Tab.ABOUT);
+    setSideOpen(false);
   }
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -35,7 +42,7 @@ const NavBar = (props: IProps) => {
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{ display: { xs: "none", sm: "block" }, mr: 2 }}
           >
             <img src={small_logo} height={imgSize} width={imgSize} alt=""></img>
           </IconButton>
@@ -48,12 +55,40 @@ const NavBar = (props: IProps) => {
           >
             The Pretentious Gentleman
           </Typography>
-          <Button onClick={toHome} color="inherit">
-            Home
-          </Button>
-          <Button onClick={toAboutMe} color="inherit">
-            About Me
-          </Button>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <Button onClick={toHome} color="inherit">
+              Home
+            </Button>
+            <Button onClick={toAboutMe} color="inherit">
+              About Me
+            </Button>
+          </Box>
+          <Box sx={{ display: { xs: "block", sm: "none" } }}>
+            <IconButton
+              onClick={() => setSideOpen(true)}
+              sx={{ color: "white" }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Drawer open={sideOpen} onClose={() => setSideOpen(false)}>
+              <Box
+                sx={{
+                  backgroundColor: licorice,
+                  height: "100%",
+                  padding: 2,
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <Button onClick={toHome} sx={{ color: "white" }}>
+                  Home
+                </Button>
+                <Button onClick={toAboutMe} sx={{ color: "white" }}>
+                  About Me
+                </Button>
+              </Box>
+            </Drawer>
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
