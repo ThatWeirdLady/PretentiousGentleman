@@ -8,13 +8,16 @@ interface VideoCardProps {
 }
 
 const ratio = 9 / 16;
+export const ytVideoWidth = 560;
 const VideoCard = (props: VideoCardProps) => {
   const title = props.title;
   const vid = props.vid;
-  const width = Math.min(window.innerWidth, 560) - 16 * 2.5;
+  const width = Math.min(window.innerWidth, ytVideoWidth) - 16 * 2.5;
   const height = ratio * width;
   return (
-    <Box sx={{ m: 2, width: width }}>
+    <Box
+      sx={{ p: 2, width: "100%", display: "flex", justifyContent: "center" }}
+    >
       <iframe
         width={width}
         height={height}

@@ -3,28 +3,49 @@ import { ParallaxBackground } from "../Parallax/ParallaxBackground";
 import Aurora from "../images/Aurora.jpeg";
 import ProfilePic from "../images/PretentiousGentlemanProfilePic.jpg";
 import { Typography } from "@mui/material";
+import { ParallaxText } from "./ParallaxText";
 
 const AboutMe = () => {
   return (
     <>
-      <ParallaxBackground url={Aurora} height="52vh" text="About Me" />
+      <ParallaxBackground url={Aurora} height="52vh">
+        <Box
+          sx={{
+            width: "100%",
+            display: { xs: "none", sm: "flex" },
+            alignItems: "center",
+            justifyContent: "space-around",
+          }}
+        >
+          <ParallaxText>About Me</ParallaxText>
+          <img
+            className="
+        rounded-image"
+            src={ProfilePic}
+            alt="Profile Pic of The Pretentious Gentleman"
+            height={450}
+          ></img>
+        </Box>
+        <Box sx={{ display: { xs: "block", sm: "none" } }}>
+          <img
+            className="
+        rounded-image"
+            src={ProfilePic}
+            alt="Profile Pic of The Pretentious Gentleman"
+            width="75%"
+          ></img>
+        </Box>
+      </ParallaxBackground>
       <Box
         sx={{
           display: "flex",
           justifyContent: "space-evenly",
           flexDirection: "row",
+          flexWrap: "wrap",
           backgroundColor: "whitesmoke",
-          paddingTop: "50px",
-          paddingBottom: "50px",
+          py: 3,
         }}
       >
-        <img
-          className="
-        rounded-image"
-          src={ProfilePic}
-          alt="Profile Pic of The Pretentious Gentleman"
-          height={450}
-        ></img>
         <Box
           sx={{
             height: "500px",

@@ -11,7 +11,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(Tab.HOME);
 
   return (
-    <div className="App" style={{ width: "100vw" }}>
+    <div className="App" style={{ flexGrow: 1 }}>
       <NavBar onPageChange={setCurrentPage} />
       {currentPage === Tab.HOME && <Portfolio />}
       {currentPage === Tab.ABOUT && <AboutMe />}

@@ -18,11 +18,14 @@ import BardOnAWall from "./images/BardOnAWall.jpg";
 import ArtworkCard from "./Components/ArtworkCard";
 import FilmCarousel from "./Components/FilmCarousel";
 import { licorice } from ".";
+import { ParallaxText } from "./Components/ParallaxText";
 
 export const Portfolio = () => {
   return (
     <>
-      <ParallaxBackground url={Forest} height="20vh" text={"Written Works"} />
+      <ParallaxBackground url={Forest} height="20vh">
+        <ParallaxText>Written Works</ParallaxText>
+      </ParallaxBackground>
 
       <Box
         sx={{
@@ -54,8 +57,9 @@ export const Portfolio = () => {
         />
       </Box>
 
-      <ParallaxBackground url={Forest} height="20vh" text={"Artwork"} />
-
+      <ParallaxBackground url={Forest} height="20vh">
+        <ParallaxText>Artwork</ParallaxText>
+      </ParallaxBackground>
       <Box
         sx={{
           display: "flex",
@@ -109,7 +113,9 @@ export const Portfolio = () => {
           title={"A Broken Song"}
         />
       </Box>
-      <ParallaxBackground url={Graveyard} height="20vh" text="Film Work" />
+      <ParallaxBackground url={Graveyard} height="20vh">
+        <ParallaxText>Film Work</ParallaxText>
+      </ParallaxBackground>
       <FilmCarousel></FilmCarousel>
     </>
   );
