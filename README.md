@@ -6,13 +6,10 @@ You can interact with the live demo here: https://thatweirdlady.github.io/Preten
 ## Features
 
 - Parallax background
-- Navigation via Tabs  
+- Works on Desktop and Mobile
 
 ## Technologies Used
 
-- HTML
-- CSS
-- Typescript 
-- React
-- MUI
-- ES lint
+- React 18
+- MUI 5
+- ES Lint
